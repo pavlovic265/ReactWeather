@@ -11,7 +11,10 @@ var React = require('react');
 //statles component
 var About = (props) => {
     return (
-            <h3>About Component</h3>
+            <div>
+                <h3>About</h3>
+                <p>Wellcome to about page</p>
+            </div>
         )
 };
 
