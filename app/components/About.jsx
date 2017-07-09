@@ -13,7 +13,7 @@ var {Link} = require('react-router');
 var About = (props) => {
     return (
             <div>
-                <h3 className="text-center">About</h3>
+                <h3 className="text-center page-title">About</h3>
                 <p>This is some tets... :)</p>
                 <ul>
                     <li>

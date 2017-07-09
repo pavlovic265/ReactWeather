@@ -32,7 +32,8 @@ module.exports = {
             About: 'app/components/About.jsx',
             Examples: 'app/components/Examples.jsx',
             ErrorModal: 'app/components/ErrorModal.jsx',
-            openWatherMap: 'app/api/openWatherMap.jsx'
+            openWatherMap: 'app/api/openWatherMap.jsx',
+            applicationStyles: 'app/styles/app.css'
         },
         extensions: ['', '.js', '.jsx']
     },
