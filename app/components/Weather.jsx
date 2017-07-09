@@ -15,7 +15,9 @@ var Weather = React.createClass({
 
         this.setState({
             isLoading: true,
-            errorMessage: null
+            errorMessage: null,
+            location: null,
+            temp: null
         });
 
         openWatherMap.getTemp(location)
@@ -33,7 +35,24 @@ var Weather = React.createClass({
                 });
                 // alert(errorMessage);
             });
-    },  
+    },
+
+// Poziva se kada se komponenta renderovala
+    componentDidMount: function(){
+        var location = this.props.location.query.location;
+        if(location && location.length > 0) {
+            this.handleSearch(location);
+            window.location.hash = '#/';
+        }
+    },
+// Poziva sa svaki put kada se menjaju props od komponente
+    componentWillReceiveProps: function(newProps){
+        var location = newProps.location.query.location;
+        if(location && location.length > 0) {
+            this.handleSearch(location);
+            window.location.hash = '#/';
+        }
+    },
 
     render: function () {
         var {temp, location, isLoading, errorMessage} = this.state;
